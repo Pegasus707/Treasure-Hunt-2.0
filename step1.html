@@ -1,96 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 1: Vibe Check ✨</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            overflow: hidden;
-            color: #fff;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 500px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            animation: fadeIn 2s ease;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            animation: slideDown 1.5s ease;
-        }
-
-        .options button {
-            background: #ff6a00;
-            border: none;
-            margin: 15px;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            border-radius: 40px;
-            cursor: pointer;
-            color: #fff;
-            transition: all 0.3s ease;
-            width: 80%;
-            max-width: 300px;
-            animation: popUp 1.8s ease;
-        }
-
-        .options button:hover {
-            transform: scale(1.05);
-            background: #ffa500;
-            box-shadow: 0 0 20px #ffb347;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0; transform: scale(0.95);}
-            to {opacity: 1; transform: scale(1);}
-        }
-
-        @keyframes slideDown {
-            from {transform: translateY(-50px); opacity: 0;}
-            to {transform: translateY(0); opacity: 1;}
-        }
-
-        @keyframes popUp {
-            from {transform: scale(0);}
-            to {transform: scale(1);}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 1 — Vibe Check</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Quick vibe check…</h1>
-        <div class="options">
-            <button onclick="nextStep()">🐢 Slow but steady</button><br>
-            <button onclick="nextStep()">😈 Chaos energy</button><br>
-            <button onclick="nextStep()">🎬 Main character moment</button><br>
-            <button onclick="nextStep()">🫥 Anti-social but cute</button>
-        </div>
-    </div>
+  <div class="container fade-in">
+    <h1>Quick Vibe Check 🎭</h1>
+    <p>Answer correctly to continue...</p>
 
-    <script>
-        function nextStep() {
-            window.location.href = 'step2.html';
-        }
-    </script>
+    <div id="quiz">
+      <p>👉 What’s the most elite college snack?</p>
+      <button onclick="checkAnswer(true)">Maggie at 2AM 🍜</button><br><br>
+      <button onclick="checkAnswer(false)">Energy drink with Chips 🥤🍟</button><br><br>
+      <button onclick="checkAnswer(false)">Water 💧</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    function checkAnswer(isCorrect) {
+      if (isCorrect) {
+        window.location.href = "step2.html";
+      } else {
+        alert("❌ Wrong answer. Try again!");
+      }
+    }
+  </script>
 </body>
 </html>
