@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 2 — Secret Compatibility Test</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container fade-in">
+  <h1>Secret Compatibility Test 💫</h1>
+  <p>Pick answers honestly… 👀</p>
+
+  <div id="quiz">
+    <p>✨ What’s your perfect weekend plan?</p>
+    <button onclick="checkAnswer(true)">Chill + Movies + Snacks 🎥</button><br><br>
+    <button onclick="checkAnswer(false)">Early Morning Gym 🏋️</button><br><br>
+    <button onclick="checkAnswer(false)">Extra Study Time 📚</button><br><br>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  function checkAnswer(isCorrect) {
+    if (isCorrect) {
+      window.location.href = 'finalstep.html';
+    } else {
+      alert('❌ Wrong vibe… pick again 😜');
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasure Found 🎉</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container fade-in">
+  <h1>🎉 Congratulations!</h1>
+  <p>You’ve reached the end of the mystery hunt.</p>
+
+  <p style="font-size: 1.6rem; margin: 30px 0;">Your prize awaits:</p>
+  
+  <div style="font-size: 2rem; background: #fff; color: #111; padding: 15px 30px; border-radius: 50px; margin-bottom: 20px;">
+    @archit_surve_
+  </div>
+  
+  <button onclick="copyHandle()">📋 Copy Handle</button>
+
+  <p style="margin-top: 20px; font-style: italic;">DM me “treasure found” and you’ve got my attention 😎</p>
+</div>
+
+<script>
+  function copyHandle() {
+    navigator.clipboard.writeText('@archit_surve_')
+      .then(() => alert('Copied to clipboard ✅'))
+      .catch(() => alert('Failed to copy. Please copy manually.'));
+  }
+</script>
+
+</body>
+</html>
